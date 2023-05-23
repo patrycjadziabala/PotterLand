@@ -72,6 +72,13 @@
                 <constraint firstItem="LIl-66-xgg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oCa-OP-ZNb"/>
             </constraints>
             <size key="customSize" width="133" height="179"/>
+            <connections>
+                <outlet property="contentView" destination="LIl-66-xgg" id="Gbk-qP-geR"/>
+                <outlet property="image" destination="qKK-XQ-dVo" id="mBe-p0-Zwu"/>
+                <outlet property="imageContainerView" destination="yjO-G5-aLe" id="WZn-CJ-7RH"/>
+                <outlet property="titleLabel" destination="Hzq-Px-zUQ" id="TMO-8w-MYM"/>
+                <outlet property="yearLabel" destination="Tz9-uD-ctm" id="th9-7D-XbH"/>
+            </connections>
             <point key="canvasLocation" x="142.74809160305344" y="65.140845070422543"/>
         </collectionViewCell>
     </objects>
