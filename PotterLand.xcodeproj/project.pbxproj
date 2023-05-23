@@ -17,6 +17,10 @@
 		46867C052A1B9B6600FD06C5 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46867C032A1B9B6600FD06C5 /* HomeScreenViewController.swift */; };
 		46867C062A1B9B6600FD06C5 /* HomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46867C042A1B9B6600FD06C5 /* HomeScreenViewController.xib */; };
 		46867C0A2A1B9FB300FD06C5 /* HarryP-MVZ6w.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46867C092A1B9FB300FD06C5 /* HarryP-MVZ6w.ttf */; };
+		46867C0D2A1BC61700FD06C5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46867C0C2A1BC61700FD06C5 /* APIManager.swift */; };
+		46867C102A1BE6E800FD06C5 /* APIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46867C0F2A1BE6E800FD06C5 /* APIModels.swift */; };
+		46867C142A1CD52400FD06C5 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46867C122A1CD52400FD06C5 /* MovieCollectionViewCell.swift */; };
+		46867C152A1CD52400FD06C5 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46867C132A1CD52400FD06C5 /* MovieCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		46867C032A1B9B6600FD06C5 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		46867C042A1B9B6600FD06C5 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
 		46867C092A1B9FB300FD06C5 /* HarryP-MVZ6w.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HarryP-MVZ6w.ttf"; path = "harry-p-font/HarryP-MVZ6w.ttf"; sourceTree = SOURCE_ROOT; };
+		46867C0C2A1BC61700FD06C5 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		46867C0F2A1BE6E800FD06C5 /* APIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModels.swift; sourceTree = "<group>"; };
+		46867C122A1CD52400FD06C5 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		46867C132A1CD52400FD06C5 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +73,11 @@
 			isa = PBXGroup;
 			children = (
 				46867BFF2A1B899B00FD06C5 /* Utilities */,
+				46867C0B2A1BC5FA00FD06C5 /* DataManager */,
+				46867C0E2A1BE69E00FD06C5 /* Models */,
+				46867C072A1B9B8600FD06C5 /* Controllers */,
 				46867BEB2A1B86ED00FD06C5 /* AppDelegate.swift */,
 				46867BED2A1B86ED00FD06C5 /* SceneDelegate.swift */,
-				46867C072A1B9B8600FD06C5 /* Controllers */,
 				46867BF42A1B86EE00FD06C5 /* Assets.xcassets */,
 				46867BF92A1B86EE00FD06C5 /* Info.plist */,
 			);
@@ -86,6 +96,7 @@
 		46867C072A1B9B8600FD06C5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				46867C112A1CD4F600FD06C5 /* ReusableCells */,
 				46867C032A1B9B6600FD06C5 /* HomeScreenViewController.swift */,
 				46867C042A1B9B6600FD06C5 /* HomeScreenViewController.xib */,
 				46867BEF2A1B86ED00FD06C5 /* ViewController.swift */,
@@ -101,6 +112,31 @@
 				46867C092A1B9FB300FD06C5 /* HarryP-MVZ6w.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		46867C0B2A1BC5FA00FD06C5 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				46867C0C2A1BC61700FD06C5 /* APIManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		46867C0E2A1BE69E00FD06C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				46867C0F2A1BE6E800FD06C5 /* APIModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		46867C112A1CD4F600FD06C5 /* ReusableCells */ = {
+			isa = PBXGroup;
+			children = (
+				46867C122A1CD52400FD06C5 /* MovieCollectionViewCell.swift */,
+				46867C132A1CD52400FD06C5 /* MovieCollectionViewCell.xib */,
+			);
+			path = ReusableCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +202,7 @@
 				46867C0A2A1B9FB300FD06C5 /* HarryP-MVZ6w.ttf in Resources */,
 				46867BF52A1B86EE00FD06C5 /* Assets.xcassets in Resources */,
 				46867BF32A1B86ED00FD06C5 /* Main.storyboard in Resources */,
+				46867C152A1CD52400FD06C5 /* MovieCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,11 +213,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46867C0D2A1BC61700FD06C5 /* APIManager.swift in Sources */,
 				46867BF02A1B86ED00FD06C5 /* ViewController.swift in Sources */,
 				46867BEC2A1B86ED00FD06C5 /* AppDelegate.swift in Sources */,
+				46867C102A1BE6E800FD06C5 /* APIModels.swift in Sources */,
 				46867C022A1B89E200FD06C5 /* Constants.swift in Sources */,
 				46867BEE2A1B86ED00FD06C5 /* SceneDelegate.swift in Sources */,
 				46867C052A1B9B6600FD06C5 /* HomeScreenViewController.swift in Sources */,
+				46867C142A1CD52400FD06C5 /* MovieCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

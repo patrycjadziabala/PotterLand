@@ -15,6 +15,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeScreenViewController" customModule="PotterLand" customModuleProvider="target">
             <connections>
+                <outlet property="charactersContainerView" destination="3kp-kd-UZv" id="l9Q-oe-3uV"/>
+                <outlet property="moviesContainerView" destination="G9Y-3z-tuO" id="7Td-d6-hBG"/>
+                <outlet property="potterLabel" destination="3nK-pP-OPS" id="zCu-EB-NzL"/>
+                <outlet property="titleLabel" destination="PCJ-Qi-4L1" id="CR5-7c-gyD"/>
+                <outlet property="trailersContainerView" destination="yQp-Bt-mNQ" id="SsQ-Vg-2XH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

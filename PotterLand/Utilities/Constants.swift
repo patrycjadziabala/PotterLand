@@ -21,4 +21,15 @@ struct Constants {
     static let customSilver = "CustomSilver"
     static let customYellow = "CustomYellow"
     
+    //MARK: - HP IDs for IMDb
+    
+    static let idHP1 = "tt0241527"
+    static let idHP2 = "tt0295297"
+    static let idHP3 = "tt0304141"
+    static let idHP4 = "tt0330373"
+    static let idHP5 = "tt0373889"
+    static let idHP6 = "tt0417741"
+    static let idHP7 = "tt0926084"
+    static let idHP8 = "tt1201607"
+    
 }
