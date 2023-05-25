@@ -19,11 +19,21 @@ struct TitleModel: Codable {
     let directors: String
     let stars: String
     let starList: [StarList]
-    let actorsList: [PersonForTitleModel]
+    let actorList: [PersonForTitleModel]
     let genreList: [GenreList]
     let imDbRating: String
     let imDbRatingVotes: String
     let boxOffice: BoxOffice
+}
+
+extension TitleModel: SwipeableInformationTilePresentable {
+    var titleLabel: String {
+        title
+    }
+    
+    var imageUrlString: String {
+        image
+    }
 }
 
 struct StarList: Codable {

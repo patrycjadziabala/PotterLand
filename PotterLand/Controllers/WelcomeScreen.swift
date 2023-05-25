@@ -10,27 +10,37 @@ import UIKit
 class WelcomeScreen: UIViewController {
     
     let apiManager = APIManager()
-    let hpMoviesArray: [TitleModel] = []
+    let tabRouter: TabRouterProtocol
+    
+    init(tabRouter: TabRouterProtocol) {
+        self.tabRouter = tabRouter
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchMoviesData()
+//        fetchMoviesData()
         
     }
     
-    // MARK: - Fetch Movies Data
+    // MARK: - Prepare Data to show
     
-   func fetchMoviesData() {
-       
-       apiManager.fetchHPMovie(id: Constants.idHP1) { [weak self] result in
-           switch result {
-           case .success(let title):
-               print("success \(title)")
-           case .failure(let error):
-               print("error \(error)")
-           }
-       }
+//    func fetchMoviesData() {
+//        apiManager.fetchMoviesData { result in
+//            switch result {
+//            case .success(let models):
+//                self.tabRouter.navigateToHomeScreen()
+//                // show next screen with the data (use router)
+//            case .failure(let error):
+//                ()
+//                // retry?
+//            }
+//        }
+//    }
+
     }
-    
-}

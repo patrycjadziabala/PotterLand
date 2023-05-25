@@ -32,4 +32,7 @@ struct Constants {
     static let idHP7 = "tt0926084"
     static let idHP8 = "tt1201607"
     
+    //MARK: - Titles/Names
+    
+    static let collectionViewCell = "MovieCollectionViewCell"
 }

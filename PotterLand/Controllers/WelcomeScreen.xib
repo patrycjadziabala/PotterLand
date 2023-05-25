@@ -1,12 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HarryP-MVZ6w.ttf">
+            <string>HarryP</string>
+        </array>
+    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeScreen" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeScreen" customModule="PotterLand" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -15,8 +22,56 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="aOi-5E-ace">
+                    <rect key="frame" x="0.0" y="59" width="375" height="274"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQl-Ga-DwL">
+                            <rect key="frame" x="127" y="0.0" width="121.33333333333331" height="71.333333333333329"/>
+                            <fontDescription key="fontDescription" name="HarryP" family="Harry P" pointSize="50"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOi-A6-scf">
+                            <rect key="frame" x="175.33333333333334" y="92.333333333333343" width="24.666666666666657" height="50.333333333333343"/>
+                            <fontDescription key="fontDescription" name="HarryP" family="Harry P" pointSize="50"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PotterLand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1Z-5h-Vr5">
+                            <rect key="frame" x="21.333333333333343" y="163.66666666666666" width="332.33333333333326" height="110.33333333333334"/>
+                            <fontDescription key="fontDescription" name="HarryP" family="Harry P" pointSize="110"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lightning" highlightedImage="Lightning" translatesAutoresizingMaskIntoConstraints="NO" id="cBU-aL-f5D">
+                    <rect key="frame" x="87.666666666666686" y="363" width="200" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="ID0-Yv-v1s"/>
+                        <constraint firstAttribute="width" constant="200" id="wUn-rb-OQs"/>
+                    </constraints>
+                </imageView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="CustomSilver"/>
+            <constraints>
+                <constraint firstItem="cBU-aL-f5D" firstAttribute="centerX" secondItem="aOi-5E-ace" secondAttribute="centerX" id="7yl-GX-ffu"/>
+                <constraint firstItem="aOi-5E-ace" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FET-bI-86l"/>
+                <constraint firstItem="aOi-5E-ace" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="VJo-r7-JFK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="aOi-5E-ace" secondAttribute="bottom" constant="300" id="dVs-qq-zmD"/>
+                <constraint firstItem="cBU-aL-f5D" firstAttribute="top" secondItem="aOi-5E-ace" secondAttribute="bottom" constant="30" id="otC-Tb-DUh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aOi-5E-ace" secondAttribute="trailing" id="qy1-u0-les"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="122.90076335877862" y="20.774647887323944"/>
         </view>
     </objects>
+    <resources>
+        <image name="Lightning" width="32" height="50"/>
+        <namedColor name="CustomSilver">
+            <color red="0.36500000953674316" green="0.36500000953674316" blue="0.36500000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

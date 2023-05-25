@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 
 protocol APIManagerProtocol: AnyObject {
-    
+    func fetchMoviesData(completion: @escaping (Result<[TitleModel], Error>) -> Void)
 }
 
 enum APIEndpoint: String {
@@ -19,15 +19,16 @@ enum APIEndpoint: String {
 enum APIManagerError: Error {
     case couldNotBuildURL
     case unknownError
+    case notAllMoviesFetched
 }
 
 class APIManager: APIManagerProtocol {
 
-    let baseURLString: String = "https://imdb-api.com/<language>/API/<endpoint>/k_bdv8grxf/"
-    
+    let baseURLString: String = "https://imdb-api.com/<language>/API/<endpoint>/k_hd74d58q/"
+
     let language: String
     
-    var currentTasks: [URLSessionDataTask] = []
+    var hpMoviesArray: [TitleModel] = []
     
     init(language: String = "en") {
         self.language = language
@@ -52,11 +53,7 @@ class APIManager: APIManagerProtocol {
             return
         }
         let session = URLSession(configuration: .default)
-        var currentTask: URLSessionDataTask?
         let task = session.dataTask(with: url) { [weak self] data, response, error in
-            self?.currentTasks.removeAll { storedTask in
-                storedTask === currentTask
-            }
             if let error = error {
                 completion(.failure(error))
                 return
@@ -74,10 +71,49 @@ class APIManager: APIManagerProtocol {
             }
             completion(.failure(APIManagerError.unknownError))
         }
-        currentTask = task
         task.resume()
-        currentTasks.append(task)
     }
+    
+    func fetchMoviesData(completion: @escaping (Result<[TitleModel], Error>) -> Void) {
+        let dispatchGroup = DispatchGroup()
+        fetchHPMovieData(id: Constants.idHP1, dispatchGroup: dispatchGroup)
+        fetchHPMovieData(id: Constants.idHP2, dispatchGroup: dispatchGroup)
+        fetchHPMovieData(id: Constants.idHP3, dispatchGroup: dispatchGroup)
+        fetchHPMovieData(id: Constants.idHP4, dispatchGroup: dispatchGroup)
+        fetchHPMovieData(id: Constants.idHP5, dispatchGroup: dispatchGroup)
+        fetchHPMovieData(id: Constants.idHP6, dispatchGroup: dispatchGroup)
+        fetchHPMovieData(id: Constants.idHP7, dispatchGroup: dispatchGroup)
+        fetchHPMovieData(id: Constants.idHP8, dispatchGroup: dispatchGroup)
+        dispatchGroup.notify(queue: .main) {
+            print("All finished", self.hpMoviesArray)
+            let sortedArray = self.hpMoviesArray.sorted {
+                (Int($0.year) ?? 0) < (Int($1.year) ?? 0)
+            }
+            for movie in sortedArray {
+                print("Year: \(movie.year), title: \(movie.title)")
+            }
+            // add check if we have 8 movies
+            if sortedArray.count == 8 {
+                completion(.success(sortedArray))
+            } else {
+                completion(.failure(APIManagerError.notAllMoviesFetched))
+            }
+        }
+     }
+    
+     func fetchHPMovieData(id: String, dispatchGroup: DispatchGroup) {
+         dispatchGroup.enter()
+         fetchHPMovie(id: id) { [weak self] result in
+             switch result {
+             case .success(let title):
+                 let hp = title
+                 self?.hpMoviesArray.append(hp)
+             case .failure(let error):
+                 print("error \(error)")
+             }
+             dispatchGroup.leave()
+         }
+     }
     
     }
     
