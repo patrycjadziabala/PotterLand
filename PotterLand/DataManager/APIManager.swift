@@ -24,7 +24,7 @@ enum APIManagerError: Error {
 
 class APIManager: APIManagerProtocol {
 
-    let baseURLString: String = "https://imdb-api.com/<language>/API/<endpoint>/k_hd74d58q/"
+    let baseURLString: String = "https://imdb-api.com/<language>/API/<endpoint>/k_n7hl962k/"
 
     let language: String
     

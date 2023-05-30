@@ -61,7 +61,7 @@ class SwipeableInformationTilesController: UIViewController {
 extension SwipeableInformationTilesController: UICollectionViewDelegate {
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        CGSize(width: 130, height: 180)
+        CGSize(width: 100, height: 300)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -73,7 +73,7 @@ extension SwipeableInformationTilesController: UICollectionViewDelegate {
 extension SwipeableInformationTilesController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 130, height: 180)
+        return CGSize(width: 180, height: 300)
     }
 }
 

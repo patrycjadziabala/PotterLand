@@ -14,6 +14,7 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var moviesContainerView: UIView!
     @IBOutlet weak var trailersContainerView: UIView!
     @IBOutlet weak var charactersContainerView: UIView!
+    @IBOutlet weak var moviesCollectionView: UIView!
     
     let tabRouter: TabRouterProtocol
     let hpMoviesController: SwipeableInformationTilesController
@@ -52,7 +53,7 @@ class HomeScreenViewController: UIViewController {
         addChild(hpMoviesController)
         view.addSubview(hpMoviesController.view)
         hpMoviesController.didMove(toParent: self)
-        hpMoviesController.view.constraint(to: moviesContainerView)
+        hpMoviesController.view.constraint(to: moviesCollectionView)
     }
     
     func prepareForShowingMoviesInformation() {
