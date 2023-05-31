@@ -18,12 +18,12 @@ struct TitleModel: Codable {
     let awards: String
     let directors: String
     let stars: String
-    let starList: [StarList]
+    let starList: [StarListModel]
     let actorList: [PersonForTitleModel]
-    let genreList: [GenreList]
+    let genreList: [GenreListModel]
     let imDbRating: String
     let imDbRatingVotes: String
-    let boxOffice: BoxOffice
+    let boxOffice: BoxOfficeModel
 }
 
 extension TitleModel: SwipeableInformationTilePresentable {
@@ -36,7 +36,7 @@ extension TitleModel: SwipeableInformationTilePresentable {
     }
 }
 
-struct StarList: Codable {
+struct StarListModel: Codable {
     let id: String
     let name: String
 }
@@ -48,14 +48,37 @@ struct PersonForTitleModel: Codable {
     let asCharacter: String
 }
 
-struct GenreList: Codable {
+struct GenreListModel: Codable {
     let key: String
     let value: String
 }
 
-struct BoxOffice: Codable {
+struct BoxOfficeModel: Codable {
     let budget: String
     let openingWeekendUSA: String
     let grossUSA: String
     let cumulativeWorldwideGross: String
+}
+
+struct HomeScreenTrailerModel: Codable {
+    let imDbId: String
+    let title: String
+    let year: String
+    let thumbnailUrl: String
+    let link: String
+    let linkEmbed: String
+}
+
+extension HomeScreenTrailerModel: SwipeableInformationTilePresentable {
+    var id: String {
+        imDbId
+    }
+
+    var titleLabel: String {
+        title
+    }
+
+    var imageUrlString: String {
+        thumbnailUrl
+    }
 }

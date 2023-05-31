@@ -35,4 +35,5 @@ struct Constants {
     //MARK: - Titles/Names
     
     static let collectionViewCell = "MovieCollectionViewCell"
+    static let trailerCollectionViewCell = "TrailerCollectionViewCell"
 }

@@ -15,6 +15,9 @@
 		46630AD62A1F901300E37F21 /* TabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46630AD52A1F901300E37F21 /* TabRouter.swift */; };
 		46630AD92A1F9D1300E37F21 /* SwipeableInformationTilesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46630AD82A1F9D1300E37F21 /* SwipeableInformationTilesController.swift */; };
 		46630ADB2A1FB7DF00E37F21 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46630ADA2A1FB7DF00E37F21 /* HomeScreenViewModel.swift */; };
+		46630ADD2A26543700E37F21 /* TrailerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46630ADC2A26543700E37F21 /* TrailerViewController.swift */; };
+		46630AE02A26748B00E37F21 /* TrailerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46630ADE2A26748B00E37F21 /* TrailerCollectionViewCell.swift */; };
+		46630AE12A26748B00E37F21 /* TrailerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46630ADF2A26748B00E37F21 /* TrailerCollectionViewCell.xib */; };
 		46867BEC2A1B86ED00FD06C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46867BEB2A1B86ED00FD06C5 /* AppDelegate.swift */; };
 		46867BEE2A1B86ED00FD06C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46867BED2A1B86ED00FD06C5 /* SceneDelegate.swift */; };
 		46867BF02A1B86ED00FD06C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46867BEF2A1B86ED00FD06C5 /* ViewController.swift */; };
@@ -38,6 +41,9 @@
 		46630AD52A1F901300E37F21 /* TabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabRouter.swift; sourceTree = "<group>"; };
 		46630AD82A1F9D1300E37F21 /* SwipeableInformationTilesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableInformationTilesController.swift; sourceTree = "<group>"; };
 		46630ADA2A1FB7DF00E37F21 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		46630ADC2A26543700E37F21 /* TrailerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerViewController.swift; sourceTree = "<group>"; };
+		46630ADE2A26748B00E37F21 /* TrailerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerCollectionViewCell.swift; sourceTree = "<group>"; };
+		46630ADF2A26748B00E37F21 /* TrailerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrailerCollectionViewCell.xib; sourceTree = "<group>"; };
 		46867BE82A1B86ED00FD06C5 /* PotterLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PotterLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46867BEB2A1B86ED00FD06C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46867BED2A1B86ED00FD06C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 				46630ADA2A1FB7DF00E37F21 /* HomeScreenViewModel.swift */,
 				46867C042A1B9B6600FD06C5 /* HomeScreenViewController.xib */,
 				46630AD82A1F9D1300E37F21 /* SwipeableInformationTilesController.swift */,
+				46630ADC2A26543700E37F21 /* TrailerViewController.swift */,
 				46867C112A1CD4F600FD06C5 /* ReusableCells */,
 				46867BEF2A1B86ED00FD06C5 /* ViewController.swift */,
 				46867BF12A1B86ED00FD06C5 /* Main.storyboard */,
@@ -165,6 +172,8 @@
 			children = (
 				46867C122A1CD52400FD06C5 /* MovieCollectionViewCell.swift */,
 				46867C132A1CD52400FD06C5 /* MovieCollectionViewCell.xib */,
+				46630ADE2A26748B00E37F21 /* TrailerCollectionViewCell.swift */,
+				46630ADF2A26748B00E37F21 /* TrailerCollectionViewCell.xib */,
 			);
 			path = ReusableCells;
 			sourceTree = "<group>";
@@ -234,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46630AE12A26748B00E37F21 /* TrailerCollectionViewCell.xib in Resources */,
 				46867BF82A1B86EE00FD06C5 /* LaunchScreen.storyboard in Resources */,
 				46867C062A1B9B6600FD06C5 /* HomeScreenViewController.xib in Resources */,
 				46867C0A2A1B9FB300FD06C5 /* HarryP-MVZ6w.ttf in Resources */,
@@ -253,10 +263,12 @@
 			files = (
 				46867C0D2A1BC61700FD06C5 /* APIManager.swift in Sources */,
 				46867BF02A1B86ED00FD06C5 /* ViewController.swift in Sources */,
+				46630ADD2A26543700E37F21 /* TrailerViewController.swift in Sources */,
 				46630ACF2A1F8A9A00E37F21 /* UIKit + extensions.swift in Sources */,
 				46867BEC2A1B86ED00FD06C5 /* AppDelegate.swift in Sources */,
 				46630ACD2A1D6B3C00E37F21 /* WelcomeScreen.swift in Sources */,
 				46630AD62A1F901300E37F21 /* TabRouter.swift in Sources */,
+				46630AE02A26748B00E37F21 /* TrailerCollectionViewCell.swift in Sources */,
 				46867C102A1BE6E800FD06C5 /* APIModels.swift in Sources */,
 				46867C022A1B89E200FD06C5 /* Constants.swift in Sources */,
 				46867BEE2A1B86ED00FD06C5 /* SceneDelegate.swift in Sources */,

@@ -20,6 +20,7 @@
                 <outlet property="moviesContainerView" destination="G9Y-3z-tuO" id="abE-hk-gwT"/>
                 <outlet property="potterLabel" destination="3nK-pP-OPS" id="zCu-EB-NzL"/>
                 <outlet property="titleLabel" destination="PCJ-Qi-4L1" id="CR5-7c-gyD"/>
+                <outlet property="trailersCollectionView" destination="jLo-IL-LUv" id="WbM-kE-cgL"/>
                 <outlet property="trailersContainerView" destination="yQp-Bt-mNQ" id="SsQ-Vg-2XH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -73,11 +74,21 @@
                                                 <constraint firstAttribute="height" constant="300" id="bFq-9Q-cdX"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQp-Bt-mNQ" userLabel="TrailersCollectionView">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQp-Bt-mNQ" userLabel="TrailersCollectionViewParent">
                                             <rect key="frame" x="0.0" y="521" width="403" height="350"/>
-                                            <color key="backgroundColor" name="CustomSilver"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLo-IL-LUv" userLabel="TrailersCollectionView">
+                                                    <rect key="frame" x="5" y="0.0" width="393" height="350"/>
+                                                    <color key="backgroundColor" name="CustomSilver"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" name="CustomGold"/>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="jLo-IL-LUv" secondAttribute="bottom" id="4EY-hD-VRh"/>
                                                 <constraint firstAttribute="height" constant="350" id="8of-hy-7a6"/>
+                                                <constraint firstItem="jLo-IL-LUv" firstAttribute="top" secondItem="yQp-Bt-mNQ" secondAttribute="top" id="XNv-xF-ABx"/>
+                                                <constraint firstAttribute="trailing" secondItem="jLo-IL-LUv" secondAttribute="trailing" constant="5" id="eda-o6-pKA"/>
+                                                <constraint firstItem="jLo-IL-LUv" firstAttribute="leading" secondItem="yQp-Bt-mNQ" secondAttribute="leading" constant="5" id="fn8-Yt-lmT"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kp-kd-UZv" userLabel="CharactersCollectionView">
